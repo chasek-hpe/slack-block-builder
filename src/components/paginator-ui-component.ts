@@ -10,7 +10,8 @@ import type {
   Nullable,
 } from '../internal/types';
 
-export type PaginatorActionIdFn = StringReturnableFn<PaginatorState & { buttonId: PaginatorButtonId }>;
+export type PaginatorActionIdFn = 
+StringReturnableFn<PaginatorState & { buttonId: PaginatorButtonId }>;
 
 export interface PageCountTextFnParams {
   page: number;
@@ -30,7 +31,8 @@ interface PaginatorUIComponentParams<T> {
   builderFunction: PaginatorBuilderFn<T>;
 }
 
-const defaultPageCountText = ({ page, totalPages }: PageCountTextFnParams) => `Page ${page} of ${totalPages}`;
+const defaultPageCountText = ({ page, totalPages }: PageCountTextFnParams) => 
+  `Page ${page} of ${totalPages}`;
 
 export class PaginatorUIComponent<T> {
   private readonly items: T[];
