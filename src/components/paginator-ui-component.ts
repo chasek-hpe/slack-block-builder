@@ -31,8 +31,7 @@ interface PaginatorUIComponentParams<T> {
   builderFunction: PaginatorBuilderFn<T>;
 }
 
-const defaultPageCountText = ({ page, totalPages }: PageCountTextFnParams) =>
-`Page ${page} of ${totalPages}`;
+const defaultPageCountText = ({ page, totalPages }: PageCountTextFnParams) => `Page ${page} of ${totalPages}`;
 
 export class PaginatorUIComponent<T> {
   private readonly items: T[];
